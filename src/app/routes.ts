@@ -10,6 +10,8 @@ import Deployment from "./pages/Deployment";
 import AILearning from "./pages/AILearning";
 import CodeInput from "./pages/CodeInput";
 
+const basename = import.meta.env.PROD ? '/Self-Healing-System/' : '/';
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -29,4 +31,4 @@ export const router = createBrowserRouter([
       { path: "ai-learning", Component: AILearning },
     ],
   },
-]);
+], { basename });
